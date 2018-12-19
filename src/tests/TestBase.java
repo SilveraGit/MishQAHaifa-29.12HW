@@ -1,7 +1,10 @@
 package tests;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -22,4 +25,15 @@ public class TestBase {
         driver.quit();
     }
 
+    public void waitUntilElementIsLoaded(WebDriver driver,
+                                          By locator, int time)
+    {
+        try {
+            new WebDriverWait(driver, time).until(ExpectedConditions
+                    .presenceOfElementLocated(locator));
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
 }

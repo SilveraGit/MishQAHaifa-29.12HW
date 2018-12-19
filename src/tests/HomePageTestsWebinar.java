@@ -43,16 +43,4 @@ public class HomePageTestsWebinar extends TestBase {
         Assert.assertTrue(loginButton.getText().equals("Login"));
     }
 
-    private void waitUntilElementIsLoaded(WebDriver driver,
-                                          By locator, int time)
-    {
-        try {
-            new WebDriverWait(driver, time).until(ExpectedConditions
-                    .presenceOfElementLocated(locator));
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-    }
-
-}
+   }
