@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class HomePagesTests extends TestBase{
     @Test
-    public void openHomePage() throws InterruptedException {
+    public void openHomePage()  {
 
         waitUntilElementIsLoaded(driver,
                 By.xpath("//span[contains(text(),'Login')]"),
@@ -27,7 +27,7 @@ public class HomePagesTests extends TestBase{
                 .equals("Go to Event list"));
     }
     @Test
-    public void goToEventsTest() throws InterruptedException {
+    public void goToEventsTest()  {
         waitUntilElementIsLoaded(driver,
                 By.xpath("//span[contains(text(),'Login')]"),
                 45);

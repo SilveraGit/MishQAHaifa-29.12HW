@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class HomePageTestsWebinar extends TestBase {
     @Test
-    public void openHomePageTest() throws InterruptedException {
+    public void openHomePageTest()  {
 
         waitUntilElementIsLoaded(driver,By.className("mat-stroked-button"),20);
         waitUntilElementIsLoaded(driver,By.xpath("//span[contains(text(),'Create Account')]"),20);
@@ -29,7 +29,7 @@ public class HomePageTestsWebinar extends TestBase {
     }
 
     @Test
-    public void goToEventButtonTest() throws InterruptedException {
+    public void goToEventButtonTest()  {
 
         waitUntilElementIsLoaded(driver,By.xpath("//span[contains(text(),'Create Account')]"),30);
         WebElement goToEventsButton = driver.findElement(

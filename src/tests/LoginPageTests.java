@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
  */
 public class LoginPageTests extends TestBase{
     @Test
-    public void loginPositive() throws InterruptedException {
+    public void loginPositive()  {
         waitUntilElementIsLoaded(driver,
                 By.xpath("//span[contains(text(),'Login')]"),
                 45);
