@@ -16,16 +16,16 @@ import java.util.Random;
  * Created by Inka on 16-Dec-18.
  */
 public class TestBase {
-    public WebDriver driver =new ChromeDriver();
+    public WebDriver driver; //=new ChromeDriver();
     @BeforeMethod
     public void initWebDriver(){
-        //driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.get("https://mish.sheygam.com/#/wellcome");
         driver.manage().window().maximize();
     }
 
-    @AfterSuite
-    //@AfterMethod
+    //@AfterSuite
+    @AfterMethod
     public void tearDown(){
         driver.quit();
     }
