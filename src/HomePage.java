@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Inka on 16-Dec-18.
@@ -23,4 +24,5 @@ public class HomePage {
         Thread.sleep(5000);
         driver.quit();
     }
+
 }

@@ -25,9 +25,9 @@ public class LoginPageTestsWebinar extends TestBase{
         WebElement password_field = driver.findElement(By
                 .xpath("//input[@formcontrolname='password']"));
         email_field.click();
-        email_field.sendKeys("marina@123.com");
+        email_field.sendKeys("mishUser1@gmail.com");
         password_field.click();
-        password_field.sendKeys("marina");
+        password_field.sendKeys("example");
         waitUntilElementIsLoaded(driver, By.xpath("//span[contains(text(),'Log in')]"),30);
         WebElement login_button=driver.findElement(By
                 .xpath("//span[contains(text(),'Log in')]"));
@@ -38,9 +38,15 @@ public class LoginPageTestsWebinar extends TestBase{
     }
 
     @Test
-    public void negativeTest(){
-        waitUntilElementIsLoaded(driver,By.className("mat-stroked-button"),20);
+    public void negativeLogin(){
+        //driver.get("https://mish.sheygam.com/#/wellcome");
+        waitUntilElementIsLoaded(driver,
+                By.xpath("//span[contains(text(),'Login')]"),
+                //By.xpath("//span[contains(text(),'Login')]"),
+                45);
+        //waitUntilElementIsLoaded(driver,By.className("mat-stroked-button"),20);
         //waitUntilElementIsLoaded(driver,By.xpath("//span[contains(text(),'Create Account')]"),30);
+        //waitUntilElementIsLoaded(driver, By.xpath("//span[contains(text(),'Login')]"),50);
         WebElement login = driver.findElement(By
                 .xpath("//span[contains(text(),'Login')]"));
         login.click();
