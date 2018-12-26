@@ -32,4 +32,10 @@ public class HomePageHelper extends PageBase{
                 By.className("mat-stroked-button"));
         goToEventsButton.click();
     }
+
+    public void pressLoginButton() {
+        WebElement login = driver.findElement(By
+                .xpath("//span[contains(text(),'Login')]"));
+        login.click();
+    }
 }
