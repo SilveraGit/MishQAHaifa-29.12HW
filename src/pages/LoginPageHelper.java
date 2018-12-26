@@ -32,4 +32,22 @@ public class LoginPageHelper extends PageBase {
         password_field.click();
         password_field.sendKeys(value);
     }
+
+    public void pressLogInButton() {
+        waitUntilElementIsLoaded(driver,
+                By.xpath("//span[contains(text(),'Log in')]"),
+                20);
+        WebElement login_button=driver.findElement(By
+                .xpath("//span[contains(text(),'Log in')]"));
+        login_button.click();
+    }
+
+    public String getAlertText() {
+        waitUntilElementIsLoaded(driver,
+                By.xpath("//div[@class='alert alert-danger ng-star-inserted']"),
+                20);
+        WebElement alertText = driver.findElement(By.xpath("//div[@class='alert alert-danger ng-star-inserted']"));
+    return alertText.getText();
+
+    }
 }
